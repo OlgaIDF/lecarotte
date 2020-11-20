@@ -41,7 +41,7 @@ header {
 
 h1,
 h2 {
-  font-family: 'Raleway', sans-serif !important;
+ font-family: 'Open Sans', sans-serif !important;
   color: #233d4d;
   font-weight: 600;
   
@@ -176,14 +176,13 @@ h2 {
 }
 .actus {
   font-size: 0.7rem;
+  background-color: #fff;
 }
 .post {
   display: flex;
   align-items: center;
 }
-.actus {
-  background-color: #fff;
-}
+
 .actus img {
   width: 12rem;
 }
@@ -191,6 +190,7 @@ h2 {
   text-transform: uppercase;
   font-size: 0.5rem;
 }
+
 h5,
 h6 {
   color: #66921b;

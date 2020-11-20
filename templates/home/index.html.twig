@@ -89,14 +89,14 @@
         </ul>
         <!-- Qui somme nous?-tabs-->
         <div class="tab-content" id="myTabContent">
-          <div class="tab-pane fade show active mt-3" id="histoire" role="tabpanel" aria-labelledby="histoire-tab">Raw
+          <div class="tab-pane fade show active mt-3 text-justify" id="histoire" role="tabpanel" aria-labelledby="histoire-tab">Raw
             denim you
             probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master
             cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro
             keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip
             placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi
             qui.</div>
-          <div class="tab-pane fade mt-3" id="concept" role="tabpanel" aria-labelledby="concept-tab">Food truck fixie
+          <div class="tab-pane fade mt-3 text-justify" id="concept" role="tabpanel" aria-labelledby="concept-tab">Food truck fixie
             locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit,
             blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee.
             Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum
@@ -104,7 +104,7 @@
             salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit,
             sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester
             stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</div>
-          <div class="tab-pane fade mt-3" id="equipe" role="tabpanel" aria-labelledby="equipe-tab">Etsy mixtape
+          <div class="tab-pane fade mt-3 text-justify" id="equipe" role="tabpanel" aria-labelledby="equipe-tab">Etsy mixtape
             wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack
             lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard
             locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify
@@ -115,7 +115,7 @@
       </div>
       <!-- Qui somme nous?-carusel-->
       <div class="col-md-6 col-sm-12 pt-2">
-        <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
+        <div id="carouselExampleInterval" class="carousel slide ml-3" data-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active" data-interval="10000">
               <img src="./img/cook/cook.jpg" class="image-fluid d-block w-100" alt="...">
@@ -151,18 +151,18 @@
       </div>
     </div>
     <div class="row">
-      <div class="post py-2">
+      <div class="post py-2 mx-5" >
         <div class="row no-gutters">
           {% for article in articles %}
-          <div class="col-md-4 py-3 pl-5">
-            <img src="./img/actus/a3.jpg" class="img-fluid" alt="...">
+          <div class="col-md-4 pt-5 px-4">
+            <img src="{{ asset('img/articles/' ~ article.img) }}"  width="400" class="img-fluid" alt="...">
 
           </div>
-          <div class="col-md-8 px-5 actus">
+          <div class="col-md-8 actus">
             <div class="actus-body">
               <div class="actus-data text-muted py-3">{{ article.createdat|date("d M Y") }}</div>
               <h5 class="actus-title">{{article.titre}}</h5>
-              <div class="actus-excerpt">{{article.contenu}}</div>
+              <div class="actus-excerpt text-justify">{{article.contenu}}</div>
             </div>
           </div>
           {% endfor %}
@@ -204,7 +204,7 @@
 
               {% for menu in carte %}
               {% if  menu.categorie  == 'Bols' %}
-              <div class="col-md-4 col-sm-6 py-2">
+              <div class="col-xl-4 col-lg-6 p-2">
                 <div class="card m-2">
                   <img src="{{ asset('img/carte/' ~ menu.img) }}" class="card-img-top" alt="...">
                   <div class="card-body">
@@ -225,7 +225,7 @@
 
               {% for menu in carte %}
               {% if  menu.categorie  == 'Bols desserts' %}
-              <div class="col-md-4 col-sm-6 py-2">
+              <div class="col-xl-4 col-lg-6 p-2">
                 <div class="card m-2">
                   <img src="{{ asset('img/carte/' ~ menu.img) }}" class="card-img-top" alt="...">
                   <div class="card-body">
@@ -246,7 +246,7 @@
 
               {% for menu in carte %}
               {% if  menu.categorie  == 'Boissons' %}
-              <div class="col-md-4 col-sm-6 py-2">
+              <div class="col-xl-4 col-lg-6 p-2">
                 <div class="card m-2">
                   <img src="{{ asset('img/carte/' ~ menu.img) }}" class="card-img-top" alt="...">
                   <div class="card-body">
@@ -301,21 +301,25 @@
         <button type="submit" id="form-submit" class="btn btn-lg text-center mt-3 float-right">Envoyer</button>
       </div>
       <!-- Coordonnes-->
-      <div class="col-md-6 col-sm-12 pl-5">
-
+      <div class="col-md-6 col-sm-12">
+<div class="row">
+  <div class="col-12 pl-5">
         <div class="coordonnes">
           <p><i class="fas fa-map-marker-alt mr-2 mb-0"></i> 41, rue Michel Ange, Courcouronnes 91080 </p>
           <p><i class="fas fa-phone-square-alt mr-2"></i> 69 47 45 90</p>
 
           <p><i class="fas fa-envelope mr-2"></i> salut@la-carotte.fr</p>
         </div>
-        <div>
+        </div>
+        </div>
+        <div class="row">
+        <div class="col-12 text-center ">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10548.927447717815!2d2.42306!3d48.624545!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e5de11d161037b%3A0x3737c44097f010df!2s41%20Rue%20Michel%20Ange%2C%2091080%20%C3%89vry-Courcouronnes!5e0!3m2!1sen!2sfr!4v1603577958705!5m2!1sen!2sfr"
             width="600" height="420" frameborder="0" style="border:0; margin-top:2rem;" allowfullscreen=""
-            aria-hidden="false" tabindex="0"></iframe>
+            aria-hidden="false" tabindex="0" ></iframe>
         </div>
-
+</div>
       </div>
     </div>
   </div>

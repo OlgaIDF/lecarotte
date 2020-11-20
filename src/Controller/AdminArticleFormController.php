@@ -6,13 +6,13 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class AdminCarteFormController extends AbstractController
+class AdminArticleFormController extends AbstractController
 {
     /**
-     * @Route("/admin/carte/form", name="admin_carte_form")
+     * @Route("/admin/article/form", name="admin_article_form")
      */
     public function index(): Response
     {
-        return $this->render('admin/adminCarteForm.html.twig',);
+        return $this->render('admin/adminArticleForm.html.twig',);
     }
 }

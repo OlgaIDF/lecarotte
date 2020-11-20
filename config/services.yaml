@@ -6,6 +6,7 @@
 parameters:
     app.copyright: 'Copyright &copy; 2020 | La carotte '
     dossier_photos_carte: '%kernel.project_dir%/public/img/carte'
+    dossier_photos_articles: '%kernel.project_dir%/public/img/articles'
 services:
     # default configuration for services in *this* file
     _defaults:
