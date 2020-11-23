@@ -8,28 +8,49 @@
         <div class="alert alert-danger" role="alert">{{ flashError }}</div>
     {% endfor %}
 
-    <div class="container">
+    <div class="row">
+        <div class="col-10 offset-1 text-center py-3">
 
-        <div class="row">
-            <div class="col-4 offset-4 py-5">
-
-                <h2 class="mb-5">Inscription</h2>
+<h2 class="pt-3 text-center">Inscription</h2>
+<hr class="pb-3">
+    </div>
+ </div>   
+        <div class="row justify-content-center">
+            <div class="col-5 inscription">
 
                 {{ form_start(registrationForm) }}
 
-                    {{ form_label(registrationForm.email) }}
-                    {{ form_widget(registrationForm.email) }}
-                    
-                    {{ form_row(registrationForm.plainPassword) }}
-                    {{ form_row(registrationForm.agreeTerms) }}
-                    
-                    <button type="submit" id="form-submit" class="btn btn-lg text-center mt-3 float-right">S'inscrire</button>
+                
+                <div style="display: none;">
+                {{ form_label(registrationForm.roles) }}
+                {{ form_widget(registrationForm.roles) }}
+                 </div>           
+           
+                
+                {{ form_label(registrationForm.email) }}
+                {{ form_widget(registrationForm.email) }}
 
-                {{ form_end(registrationForm) }}
+               
+                
+                {{ form_row(registrationForm.plainPassword) }}
+                {{ form_row(registrationForm.agreeTerms) }}
+                
+                <button type="submit" id="form-submit" class="btn btn-lg text-center mt-3 float-right">S'inscrire</button>
+
+            {{ form_end(registrationForm) }}
+                 
+                    
+            
 
             </div>
+            
         </div>
-
+<div class="row">
+                <div class="col-12 text-center inscription py-3">
+                 <p><a href="{{ path('app_login') }}">Connectez-vous</a> si vous êtes déjà inscrit</p>
+   
+                </div>
+            </div>
     </div>
     
 {% endblock %}

@@ -32,13 +32,13 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#"><i class="fab fa-facebook"></i></a></li>
-          </li>
+         
           <li class="nav-item">
             <a class="nav-link" href="#"><i class="fab fa-instagram"></i></a></li>
-          </li>
+       
           <li class="nav-item">
             <a class="nav-link" href="#"><i class="fab fa-twitter"></i></a></li>
-          </li>
+
         </ul>
       </div>
     </nav>
@@ -52,8 +52,8 @@
     <div class="row">
       <div class="col-xl-6 col-lg-5 col-md-9">
         <img src="./img/logo.png" class="img-fluid" alt="logo">
-        <div class="horaires text-center mt-3 py-2"><span class="open">Lundi – Vendredi 11h30 - 15h00</span></br>41 rue
-          Michel Ange, </br>91080 Courcouronnes </div>
+        <div class="horaires text-center mt-3 py-2"><span class="open">Lundi – Vendredi 11h30 - 15h00</span><br/>41 rue
+          Michel Ange, <br/>91080 Courcouronnes </div>
         <p>Notre restaurant propose une délicieuse sélection de bols froids et chauds, composés d’ingrédients frais,
           cuisinés chaque jour sur place par notre brigade de chefs et toujours avec beaucoup d’amour..</p>
         <a href="#menus" class="btnD1">Découvrez notre carte <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
@@ -89,14 +89,16 @@
         </ul>
         <!-- Qui somme nous?-tabs-->
         <div class="tab-content" id="myTabContent">
-          <div class="tab-pane fade show active mt-3 text-justify" id="histoire" role="tabpanel" aria-labelledby="histoire-tab">Raw
+          <div class="tab-pane fade show active mt-3 text-justify" id="histoire" role="tabpanel"
+            aria-labelledby="histoire-tab">Raw
             denim you
             probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master
             cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro
             keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip
             placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi
             qui.</div>
-          <div class="tab-pane fade mt-3 text-justify" id="concept" role="tabpanel" aria-labelledby="concept-tab">Food truck fixie
+          <div class="tab-pane fade mt-3 text-justify" id="concept" role="tabpanel" aria-labelledby="concept-tab">Food
+            truck fixie
             locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit,
             blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee.
             Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum
@@ -104,7 +106,8 @@
             salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit,
             sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester
             stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</div>
-          <div class="tab-pane fade mt-3 text-justify" id="equipe" role="tabpanel" aria-labelledby="equipe-tab">Etsy mixtape
+          <div class="tab-pane fade mt-3 text-justify" id="equipe" role="tabpanel" aria-labelledby="equipe-tab">Etsy
+            mixtape
             wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack
             lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard
             locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify
@@ -138,6 +141,7 @@
         </div>
       </div>
     </div>
+  </div>
 
 </section>
 <!-- Actus -->
@@ -151,11 +155,11 @@
       </div>
     </div>
     <div class="row">
-      <div class="post py-2 mx-5" >
+      <div class="post py-2 mx-5">
         <div class="row no-gutters">
           {% for article in articles %}
           <div class="col-md-4 pt-5 px-4">
-            <img src="{{ asset('img/articles/' ~ article.img) }}"  width="400" class="img-fluid" alt="...">
+            <img src="{{ asset('img/articles/' ~ article.img) }}" width="400" class="img-fluid" alt="...">
 
           </div>
           <div class="col-md-8 actus">
@@ -183,7 +187,7 @@
     </div>
     <div class="cardcarte row mx-5">
       <div class="col-12 sectionText ">
-        <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <ul class="nav nav-tabs" id="myTab1" role="tablist">
           <li class="nav-item">
             <a class="nav-link active" id="bols-tab" data-toggle="tab" href="#bols" role="tab" aria-controls="bols"
               aria-selected="true">Bols</a>
@@ -197,7 +201,7 @@
               aria-selected="false">Boissons</a>
           </li>
         </ul>
-        <div class="tab-content" id="myTabContent">
+        <div class="tab-content" id="myTabContent1">
           <!-- Notre carte - bols-->
           <div class="tab-pane fade show active" id="bols" role="tabpanel" aria-labelledby="bols-tab">
             <div class="row cards text-center">
@@ -265,7 +269,7 @@
       </div>
     </div>
   </div>
-  </div>
+  
 </section>
 
 <!-- Contact-->
@@ -281,45 +285,31 @@
     <div class="row mx-5">
       <!-- Formulaire-->
       <div class="form-group col-md-6 col-sm-12 sectionText formulaire ">
+        {{ form_start(formulaireDeContact) }}
 
-        <label for="name" class="h4">Nom</label>
-        <input type="text" class="form-control" id="name">
+        {{ form_end(formulaireDeContact) }}
 
-
-        <label for="email" class="h4">Email</label>
-        <input type="email" class="form-control" id="email">
-
-        <label for="message" class="h4 ">Message</label>
-        <textarea id="message" class="form-control" rows="4"></textarea>
-        <br />
-        <input class="form-check-input" type="checkbox" name="rgpd" value="1" id="">
-
-        <label class="form-check-label" for="defaultCheck1"><sup>* </sup> En cochant cette case et en soumettant ce
-          formulaire, j'accepte que mes données personnelles soient utilisées pour me recontacter dans le cadre de ma
-          demande indiquée dans ce formulaire. Aucun autre traitement ne sera effectué avec mes informations.</label>
-
-        <button type="submit" id="form-submit" class="btn btn-lg text-center mt-3 float-right">Envoyer</button>
       </div>
       <!-- Coordonnes-->
       <div class="col-md-6 col-sm-12">
-<div class="row">
-  <div class="col-12 pl-5">
-        <div class="coordonnes">
-          <p><i class="fas fa-map-marker-alt mr-2 mb-0"></i> 41, rue Michel Ange, Courcouronnes 91080 </p>
-          <p><i class="fas fa-phone-square-alt mr-2"></i> 69 47 45 90</p>
+        <div class="row">
+          <div class="col-12 pl-5">
+            <div class="coordonnes">
+              <p><i class="fas fa-map-marker-alt mr-2 mb-0"></i> 41, rue Michel Ange, Courcouronnes 91080 </p>
+              <p><i class="fas fa-phone-square-alt mr-2"></i> 69 47 45 90</p>
 
-          <p><i class="fas fa-envelope mr-2"></i> salut@la-carotte.fr</p>
-        </div>
-        </div>
+              <p><i class="fas fa-envelope mr-2"></i> salut@la-carotte.fr</p>
+            </div>
+          </div>
         </div>
         <div class="row">
-        <div class="col-12 text-center ">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10548.927447717815!2d2.42306!3d48.624545!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e5de11d161037b%3A0x3737c44097f010df!2s41%20Rue%20Michel%20Ange%2C%2091080%20%C3%89vry-Courcouronnes!5e0!3m2!1sen!2sfr!4v1603577958705!5m2!1sen!2sfr"
-            width="600" height="420" frameborder="0" style="border:0; margin-top:2rem;" allowfullscreen=""
-            aria-hidden="false" tabindex="0" ></iframe>
+          <div class="col-12 text-center ">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10548.927447717815!2d2.42306!3d48.624545!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e5de11d161037b%3A0x3737c44097f010df!2s41%20Rue%20Michel%20Ange%2C%2091080%20%C3%89vry-Courcouronnes!5e0!3m2!1sen!2sfr!4v1603577958705!5m2!1sen!2sfr"
+              style="border:0; margin-top:2rem;width:24rem; height:20rem" allowfullscreen="" aria-hidden="false"
+              tabindex="0"></iframe>
+          </div>
         </div>
-</div>
       </div>
     </div>
   </div>

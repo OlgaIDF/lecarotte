@@ -4,10 +4,18 @@
 
 {% block body %}
 
-<div class="container">
-    <div class="row">
+<div class="container-fluid">
+  
 
-        <div class="col-4 offset-4 py-5">
+                <div class="row">
+                    <div class="col-10 offset-1 text-center py-3">
+            
+            <h1 class="pt-3 text-center">Connexion</h1>
+            <hr class="pb-3">
+                </div>
+             </div>  
+           <div class="row">    
+        <div class="col-5 connexion"></div>
             <form method="post">
 
                 {% if error %}
@@ -16,12 +24,12 @@
         
                 {% if app.user %}
                     <div class="mb-3 alert alert-success text-center">
-                        {% trans %}Vous &ecirc;tes connect&eacute; avec l'identifiant {% endtrans %}{{ app.user.username }} (<a href="{{ path('app_logout') }}" class="text-danger">d&eacute;connexion</a>).
+                        Vous &ecirc;tes connect&eacute; avec l'identifiant {{ app.user.username }} (<a href="{{ path('app_logout') }}" class="text-danger">d&eacute;connexion</a>).
                     </div>
                 {% endif %}
-        
-                <h1 class="h3 mb-3 font-weight-normal">{% trans %}Connexion{% endtrans %}</h1>
-        
+         </div>
+                    <div class="row justify-content-center">
+                        <div class="col-5 inscription">
                 <label for="inputEmail">Email</label>
                 <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" required autofocus>
         
@@ -43,13 +51,19 @@
                     </div>
                 #}
         
-                <button type="submit" id="form-submit" class="btn btn-lg text-center mt-3 float-right">
-                    {% trans %}Connexion{% endtrans %}
-                </button>
+                <button type="submit" id="form-submit" class="btn btn-lg text-center mt-3 float-right">Connexion</button>
             </form>
+           
         </div>
 
     </div>
+    <div class="row">
+        <div class="col-12 text-center py-3 connexion">
+         <p><a href="{{ path('app_register') }}">Créer un compte</a> pour obtenir plus d'options</p>
+
+        </div>
+    </div>
+</div>
 </div>
 
 {% endblock %}
