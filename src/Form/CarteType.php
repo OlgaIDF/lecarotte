@@ -9,6 +9,7 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\MoneyType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
 class CarteType extends AbstractType
@@ -17,7 +18,14 @@ class CarteType extends AbstractType
     {
         $builder
             ->add('titre', TextType::class)
-            ->add('categorie', TextType::class)
+            ->add('categorie', ChoiceType::class, [
+                'choices' => [
+                    'Bols' => 'Bols',
+                    'Bols desserts' => 'Bols desserts',
+                    'Boissons' =>'Boissons'
+                ],
+                'placeholder' => 'Sélectionnez une categorie',
+            ])
             ->add('ingredients', TextType::class)
             ->add('prix', MoneyType::class)
             ->add('img', FileType::class, [

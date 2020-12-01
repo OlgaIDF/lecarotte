@@ -10,14 +10,17 @@
     {{ form_label(formulaireUser.email) }}
     {{ form_widget(formulaireUser.email) }}
 
+
+    <br/>
     {{ form_label(formulaireUser.roles) }}
     {{ form_widget(formulaireUser.roles) }}
 
-
+    <br/>
     {{ form_row(formulaireUser.plainPassword) }}
+  
     {{ form_row(formulaireUser.agreeTerms) }}
 
-    <button type="submit" id="form-submit" class="btn btn-lg text-center mt-3 float-right">
+    <button type="submit" id="form-submit" class="btn btn-outline-dark float-right">
         Valider
     </button>
 

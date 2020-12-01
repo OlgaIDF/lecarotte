@@ -29,7 +29,6 @@ class HomeController extends AbstractController
                 ->setBody(
                     $this->renderView(
                         'contact/email.html.twig', [
-                            'nom' => $infos['nom'],
                             'prenom' => $infos['prenom'],
                              'email' => $infos['email'],
                             'message' => $infos['message']
@@ -43,6 +42,7 @@ class HomeController extends AbstractController
                 'Votre message a bien été envoyé'
             );
             
+            return $this->redirectToRoute('home');
         }
 
 

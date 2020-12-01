@@ -64,7 +64,7 @@ class AdminCarteController extends AbstractController
                 $manager->flush();
                 $this->addFlash(
                     'success',
-                    'Le menu a bien été modifiée'
+                    'Le menu a bien été ajouté'
                 );
             } else {
                 $this->addFlash(
@@ -125,7 +125,7 @@ class AdminCarteController extends AbstractController
             $manager->flush();
             $this->addFlash(
                 'success',
-                'Le menu a bien été modifiée'
+                'Le menu a bien été modifié'
             );
 
             return $this->redirectToRoute('admin_carte');
@@ -159,7 +159,7 @@ class AdminCarteController extends AbstractController
 
         $this->addFlash(
             'success',
-            'Le menu a bien été supprimée'
+            'Le menu a bien été supprimé'
         );
 
 

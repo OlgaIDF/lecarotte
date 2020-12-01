@@ -28,7 +28,7 @@ class AdminArticlesController extends AbstractController
     /**
      * @Route("/admin/articles/create", name="article_create")
      */
-    public function createArticle(Request $request)
+    public function createArticle(Request $request)//creation des articles
     {
         $article = new Articles();
         $article->setCreatedAt(new \DateTime('now'));
@@ -66,7 +66,7 @@ class AdminArticlesController extends AbstractController
                 $manager->flush();
                 $this->addFlash(
                     'success',
-                    'Le article a bien été modifiée'
+                    "L'article a bien été ajouté"
                 );
             } else {
                 $this->addFlash(
@@ -85,7 +85,7 @@ class AdminArticlesController extends AbstractController
     /**
      * @Route("/admin/articles/update-{id}", name="article_update")
      */
-    public function updateArticle(ArticlesRepository $articlesRepository, $id, Request $request)
+    public function updateArticle(ArticlesRepository $articlesRepository, $id, Request $request)// modifier des articles
     {
         $article = $articlesRepository->find($id);
 
@@ -127,7 +127,7 @@ class AdminArticlesController extends AbstractController
             $manager->flush();
             $this->addFlash(
                 'success',
-                'Le article a bien été modifiée'
+                "L'article a bien été modifié"
             );
 
             return $this->redirectToRoute('admin_articles');
@@ -161,7 +161,7 @@ class AdminArticlesController extends AbstractController
 
         $this->addFlash(
             'success',
-            'Le article a bien été supprimée'
+            "L'article a bien été supprimé"
         );
 
 

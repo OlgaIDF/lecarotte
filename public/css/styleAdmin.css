@@ -39,3 +39,12 @@ h1{
  .table{
   font-size: smaller;
  }
+ .listadmin .dropdown-divider{
+  border-top: 1px solid #233d4d;
+ }
+ #form-submit, .btn-outline-dark{
+  background: #f9ab00;
+  color: #233d4d;
+  letter-spacing: 0.1rem;
+  
+}
