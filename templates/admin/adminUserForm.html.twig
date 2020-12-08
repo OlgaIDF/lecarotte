@@ -16,10 +16,11 @@
     {{ form_widget(formulaireUser.roles) }}
 
     <br/>
+    <div style="display: none;">
     {{ form_row(formulaireUser.plainPassword) }}
   
     {{ form_row(formulaireUser.agreeTerms) }}
-
+</div>
     <button type="submit" id="form-submit" class="btn btn-outline-dark float-right">
         Valider
     </button>

@@ -40,17 +40,23 @@ header {
   padding: 7em 3em 0;
 }
 
-h1,
+h1{
+  font-family: 'Montserrat', sans-serif;
+  color:#f9aa00;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+.la{
+  color: #66921b;
+}
 h2 {
  font-family: 'Open Sans', sans-serif !important;
   color: #233d4d;
   font-weight: 600;
-  
+   padding-bottom: 2rem;
   
 }
-h2 {
-  padding-bottom: 2rem;
-}
+
 #resto {
   color: #233d4d;
   text-align: center;

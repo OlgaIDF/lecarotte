@@ -24,14 +24,14 @@ class HomeController extends AbstractController
             $infos = $formulaireContact->getData();
             // On crée le message
             $mail = (new \Swift_Message('Nouveau contact'))
-                ->setFrom($infos['email'])
+                ->setFrom(htmlspecialchars ($infos['email']))
                 ->setTo('restaurant.lacarotte@gmail.com')
                 ->setBody(
                     $this->renderView(
                         'contact/email.html.twig', [
-                            'prenom' => $infos['prenom'],
-                             'email' => $infos['email'],
-                            'message' => $infos['message']
+                            'prenom' => htmlspecialchars ($infos['prenom']),
+                             'email' => htmlspecialchars ($infos['email']),
+                            'message' => htmlspecialchars ($infos['message'])
                         ],
                         'text/html'
                     )

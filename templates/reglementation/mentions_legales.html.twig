@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %} {% block title %}{% endblock %} {% block body %}
+
+<!-- Header -->
+<header id="accueil">
+  <div class="container-fluid">
+    <!-- Navbar -->
+    <nav id="menuTop" class="navbar fixed-top navbar-expand-lg navbar-light">
+      <a class="navbar-brand pl-3" href="{{ path('home') }}"><img id="logo" src="{{ asset('img/carrot.png') }}" width="150" class="img-fluid"
+        alt="logo" /></a>
+      <button class="navbar-toggler mr-3" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-lg-auto">
+          <li class="nav-item active">
+            <a class="nav-link" data-value="accueil" href="{{ path('home') }}#accueil">Accueil<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-value="qui" href="{{ path('home') }}#qui">Qui sommes nous ?</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-value="actus" href="{{ path('home') }}#actus">Actus</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-value="menus" href="{{ path('home') }}#menus">Notre carte</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-value="contact" href="{{ path('home') }}#contact">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fab fa-facebook"></i></a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fab fa-instagram"></i></a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fab fa-twitter"></i></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Navbar fin -->
+   </div>
+   <!-- Header fin -->
+</header>
+<div class="headerText text-center my-5">
+<h2>Mentions légales</h2>
+</div>
+{% endblock %}
